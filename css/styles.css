@@ -109,7 +109,6 @@ a {
 .menu__item > .menu {
   display: none;
   position: absolute;
-  /* left: 0; */
 }
 
 .menu__item:hover > .menu {
