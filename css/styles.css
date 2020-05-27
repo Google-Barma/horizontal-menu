@@ -121,7 +121,8 @@ a {
 .menu__item > .menu {
   display: none;
   position: absolute;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .menu__item:hover > .menu {
@@ -134,5 +135,6 @@ a {
 
 .menu__item > .menu .menu__item > .menu {
   left: 100%;
+  transform: translateX(0);
   top: 0;
 }
