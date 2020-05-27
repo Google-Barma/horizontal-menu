@@ -17,10 +17,13 @@ img {
 .masthead {
   background-image: url(../images/bg-image.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  padding-top: 50px;
+  /* align-items: center; */
 }
 
 ul,
