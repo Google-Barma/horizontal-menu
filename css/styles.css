@@ -123,9 +123,9 @@ a {
   position: absolute;
   top: 0;
   left: 130px;
-  /* display: none; */
+  display: none;
 }
 
-/* .sub-menu--sub.menu__item:hover .sub-menu--sub {
+.menu__item:hover > .sub-menu--sub {
   display: block;
-} */
+}
