@@ -23,7 +23,6 @@ img {
   display: flex;
   justify-content: center;
   padding-top: 50px;
-  /* align-items: center; */
 }
 
 ul,
@@ -112,6 +111,7 @@ a {
 .menu__item > .menu {
   display: none;
   position: absolute;
+  left: 0;
 }
 
 .menu__item:hover > .menu {
