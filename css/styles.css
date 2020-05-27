@@ -44,38 +44,87 @@ a {
   display: flex;
 }
 
-.nav-menu__link {
+.menu__link {
+  display: block;
   color: #696969;
   padding-left: 10px;
+  padding: 10px 20px 10px 10px;
+  transition: all 0.3s ease;
 }
 
-.nav-menu__icon {
+.menu__item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(54, 92, 125, 0.3);
+  width: 1px;
+  height: 100%;
+}
+
+.menu__item::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(54, 92, 125, 0.3);
+  width: 1px;
+  height: 100%;
+}
+
+.menu__icon {
   width: 16px;
   height: 16px;
   fill: rgb(0, 255, 255);
 }
 
-.nav-menu__item {
+.menu__item-wrapper {
   display: flex;
   align-items: center;
-  padding: 10px 20px;
-  border-right: rgba(54, 92, 125, 0.3) 2px solid;
+  height: 100%;
 }
 
-.nav-menu__item:first-child {
-  border-left: rgba(54, 92, 125, 0.3) 2px solid;
-  background-image: none;
+.menu__item {
+  position: relative;
+  padding-left: 20px;
 }
 
-.nav-menu__item:hover {
-  background-image: linear-gradient(
-    rgba(192, 108, 132, 0.3),
-    rgba(108, 91, 123, 0.3),
-    rgba(54, 92, 125, 0.3)
-  );
-  background-color: #fff;
+.menu__item:hover {
+  box-shadow: 3px 3px 14px -2px #b5b5b5;
+  transition: all 0.3s ease;
 }
 
-.nav-menu__item:hover .nav-menu__icon {
+.menu__item:hover .menu__icon {
   fill: rgba(221, 32, 86, 0.5);
+  transition: all 0.3s ease;
 }
+
+.menu__link:hover {
+  color: #000000;
+  transition: all 0.3s ease;
+}
+
+/* SUB-MENU */
+.sub-menu {
+  position: absolute;
+  left: 0px;
+  width: 130px;
+  display: none;
+  font-size: 12px;
+}
+
+.menu__item:hover .sub-menu {
+  display: block;
+}
+
+.sub-menu--sub {
+  position: absolute;
+  left: 130px;
+  /* display: none; */
+}
+
+/* .sub-menu--sub.menu__item:hover .sub-menu--sub {
+  display: block;
+} */
