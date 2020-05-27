@@ -92,7 +92,7 @@ a {
 }
 
 .menu__item:hover {
-  box-shadow: 3px 3px 14px -2px #b5b5b5;
+  box-shadow: 0px 3px 5px 0px #d8d8d8, 0px -3px 5px 0px #dddddd;
   transition: all 0.3s ease;
 }
 
@@ -106,26 +106,21 @@ a {
   transition: all 0.3s ease;
 }
 
-/* SUB-MENU */
-.sub-menu {
-  position: absolute;
-  left: 0px;
-  width: 130px;
+.menu__item > .menu {
   display: none;
-  font-size: 12px;
+  position: absolute;
+  /* left: 0; */
 }
 
-.menu__item:hover .sub-menu {
+.menu__item:hover > .menu {
   display: block;
 }
 
-.sub-menu--sub {
-  position: absolute;
+.menu__item > .menu .menu__item .menu__link {
+  text-transform: capitalize;
+}
+
+.menu__item > .menu .menu__item > .menu {
+  left: 100%;
   top: 0;
-  left: 130px;
-  display: none;
-}
-
-.menu__item:hover > .sub-menu--sub {
-  display: block;
 }
